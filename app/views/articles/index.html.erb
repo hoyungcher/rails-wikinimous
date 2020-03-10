@@ -1,5 +1,5 @@
-<h1>Wikinimous</h1>
+<a href="/articles"><h1>Wikinimous</h1></a>
 <% @articles.each do |article| %>
-  <%= article.title %>
+  <a href="/articles/<%= article.id %>"><%= article.title %></a>
   <br>
 <% end %>
