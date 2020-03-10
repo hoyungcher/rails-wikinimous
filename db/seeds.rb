@@ -12,7 +12,7 @@ Article.destroy_all
 puts "Starting seed..."
 
 10.times do
-  Article.create(title: Faker::Quote.matz, content: Faker::Lorem.paragraph)
+  Article.create(title: Faker::Book.title, content: Faker::Lorem.paragraph)
 end
 
 puts "Finished seeding..."
