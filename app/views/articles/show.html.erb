@@ -1,8 +1,18 @@
-<a href="/articles"><h1>Wikinimous</h1></a>
-<h2><%= @article.title %></h2>
-<p><%= @article.content %></p>
+<div class="border-bottom d-flex justify-content-between">
+  <a href="/articles"><h1 class="wikinimous">Wikinimous</h1></a>
+  <a href="/articles/new"><span class="new-article">New article</span></a>
+</div>
 
-<a href="/<%= @article.id %>/edit">Edit article</a>
-<%= link_to "Delete", article_path(@article),
-      method: :delete,
-      data: {confirm: "Are you sure?"} %>
+<div class="d-flex justify-content-between">
+  <h2><%= @article.title %></h2>
+  <div class="icons">
+    <a href="/articles/<%= @article.id %>/edit"><i class="fas fa-edit fa-lg"></i></a>
+    <%= link_to article_path(@article),
+          method: :delete,
+          data: {confirm: "Are you sure?"} do %>
+      <i class="far fa-trash-alt fa-lg"></i>
+    <% end %>
+  </div>
+</div>
+
+<p><%= @article.content %></p>

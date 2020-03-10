@@ -1,2 +1,12 @@
-<h1>Articles#edit</h1>
-<p>Find me in app/views/articles/edit.html.erb</p>
+<div class="border-bottom d-flex justify-content-between">
+  <a href="/articles"><h1 class="wikinimous">Wikinimous</h1></a>
+  <a href="/articles/new">New article</a>
+</div>
+
+<%= form_for(@article) do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :content %>
+  <%= f.text_field :content %>
+  <%= f.submit %>
+<% end %>

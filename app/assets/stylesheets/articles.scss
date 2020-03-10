@@ -1,3 +1,32 @@
 // Place all the styles related to the Articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.wikinimous {
+  font-size: 20px;
+  text-decoration: none;
+  color: grey;
+  padding: 10px 0px;
+  margin: 0px;
+}
+
+.new-article {
+  font-size: 16px;
+  text-decoration: none;
+  color: grey;
+  padding: 10px 0px;
+  margin: 0px;
+}
+
+
+h2 {
+  font-size: 16px;
+}
+
+p {
+  font-size: 16px;
+}

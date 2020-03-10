@@ -1,7 +1,13 @@
-<a href="/articles"><h1>Wikinimous</h1></a>
-<a href="/articles/new">Create new article</a>
+<div class="border-bottom d-flex justify-content-between">
+  <a href="/articles"><h1 class="wikinimous">Wikinimous</h1></a>
+  <a href="/articles/new"><span class="new-article">New article</span></a>
+</div>
 <br>
 <% @articles.each do |article| %>
-  <a href="/articles/<%= article.id %>"><%= article.title %></a>
-  <br>
+  <div class="border-bottom">
+    <a href="/articles/<%= article.id %>"><%= article.title %></a>
+    <br>
+    <%= article.content %>
+    <br>
+  </div>
 <% end %>
