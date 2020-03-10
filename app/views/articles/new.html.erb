@@ -1,2 +1,11 @@
-<h1>Articles#new</h1>
-<p>Find me in app/views/articles/new.html.erb</p>
+<a href="/articles"><h1>Wikinimous</h1></a>
+<h2>New article</h2>
+<form action="/articles" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <label for="title">Title:</label>
+  <input type="text" name="article[title]" id="title">
+  <label for="content">Content:</label>
+  <input type="text" name="article[content]" id="content">
+  <input type="submit">
+</form>
+

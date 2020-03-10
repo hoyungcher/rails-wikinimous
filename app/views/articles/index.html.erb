@@ -1,4 +1,6 @@
 <a href="/articles"><h1>Wikinimous</h1></a>
+<a href="/articles/new">Create new article</a>
+<br>
 <% @articles.each do |article| %>
   <a href="/articles/<%= article.id %>"><%= article.title %></a>
   <br>
