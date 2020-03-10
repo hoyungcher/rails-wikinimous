@@ -1,3 +1,8 @@
 <a href="/articles"><h1>Wikinimous</h1></a>
 <h2><%= @article.title %></h2>
 <p><%= @article.content %></p>
+
+<a href="/<%= @article.id %>/edit">Edit article</a>
+<%= link_to "Delete", article_path(@article),
+      method: :delete,
+      data: {confirm: "Are you sure?"} %>
